@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Noopur Awasthi Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+
+		.achievement-image {
+			height: 200px;
+			width: 300px;
+		}
+
+		/* .khushi{
+			padding-left: 3%;
+		} */
+		.about-khushi {
+			padding-left: 2%;
+			padding-right: 2%;
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Noopur Awasthi</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu" style="color: white;"></span><span style="color: white;"> MENU </span></button>
+		
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<!-- <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li> -->
+					<li class="nav-item"><a href="#achievements-section" class="nav-link"><span>Achievements</span></a>
+					</li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-lg-last img"
+							style="background-image:url(images/harihd.png); margin-left: 10px;">
+							<div class="overlay"></div>
+						</div>
+
+
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Noopur Awasthi</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Student   ',
+										'Engineer  ',
+										'Full Stack Developer  ',
+										'Backend Developer   ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>A Front-End Developer Trainee</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p><a href="https://leetcode.com/u/Noopurhere21/"
+										class="btn btn-primary py-3 px-4">LeetCode</a>
+									<a href="https://github.com/khushihere20"
+										class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img class="img-fluid rounded-circle mx-auto mb-3" src="images/passport.JPG"
+												alt="" style="width: 150px; height: 150px;">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s" style="color: white;">Name: </span> <span>Noopur
+													Awasthi</span></p>
+											<p><span class="title-s" style="color: white;">Job Role: </span> <span>Front-
+													End Developer intern</span></p>
+											<p><span class="title-s" style="color: white;">Experience: </span> <span>9
+													Months</span></p>
+											<p><span class="title-s" style="color: white;">Address: </span>
+												<span>Kanpur, India</span>
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>C++</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%"
+											aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Object Oriented Programing</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%"
+											aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Data Structure Allogrithm</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 60%"
+											aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Java Script</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 60%"
+											aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<span>Node.js</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%"
+											aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<span>React.js</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 60%"
+											aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate" id="about-khushi">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+
+								<p>
+									I'm a recent BCA graduate in Computer Application with 9 months of front-end development experience, 
+									targeting a Software Development Engineer role. Completed 600+ coding problems on LeetCode, specializing in data structures and algorithms. 
+									Skilled in developing web applications with React.js, Node.js, Express.js, MySQL, and MongoDB.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Front-End Developer </span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Web Development</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Computer
+											Application</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span>Front-End:</span> <span> React.js, HTML, CSS, Tailwind,
+											Bootstrap, JavaScript</span></li>
+									<li class="d-flex"><span>Back-End:</span> <span>Node.js, Express.js, SQL, MySQL,
+											MongoDB</span></li>
+									<li class="d-flex"><span>Programming:</span> <span>C++, Python, Data Structures and
+											Algorithms (DSA)</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography,
+										    Boxing, Dancing</span>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<!-- <p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p> -->
+								<p><a href="https://www.linkedin.com/in/noopurawasthi181/"
+										class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Motivated front-end developer skilled in React.js, Express.js (Node.js), MySQL, and MongoDB,
+						with a strong foundation in DSA, C++, and Java. Eager to contribute to innovative web
+						application development as an SDE.</p>
+				</div>
+			</div>
+			<div class="row justify-content-center ">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="https://drive.google.com/file/d/1kutOYthsG60NqfgnTnz5ZzuuVe6tenWS/view?usp=drive_link"
+							class="btn btn-primary py-4 px-5">Download Resume</a></p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+			<p style="padding-left: 5%; padding-right: 5%;">
+
+				<div class="resume-wrap ftco-animate" style="text-align-left: justify;">
+					<span class="date">January 2024 - July 2024</span>
+					<h2>Full Stack Developer Intern (In Office)</h2>
+					<span class="position">Swapnil Soft Pvt. Ltd.</span>
+					
+					<ul style="list-style-type: disc;margin: 0; padding: 0;">
+						<li >Developed a full-stack government project from scratch to manage over 250,000 voter records,
+							ensuring secure and efficient operations.</li>
+						<li>Implemented role-based access for 6 different user roles, including Super-Admin, Forms Admin,
+							Sub-Admin, and Form-Feeding Staff, to facilitate smooth data handling.</li>
+						<li>Created user-friendly web applications using ReactJs, NodeJs, ExpressJs, and MySQL.</li>
+						<li>Integrated SMS, email, & WhatsApp APIs to automate greeting messages and authentication
+							notifications, enhancing communication.</li>
+					</ul>
+				</div>
+				
+				
+
+
+
+			<!-- <div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2018-2021</span>
+						<h2>Senior Data Analyst</h2>
+						<span class="position">iQuanti</span>
+						<p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands. 
+							<ul>
+								<li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li>
+								<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
+								<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div> -->
+
+			</p>
+			<br>
+			<br>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2017-2019</span>
+						<h2>Secondary School</h2>
+						<span class="position">Mother Teresa Higher secondary School,<br> Kanpur</span>
+						<p class="mt-4">Grade: 93.8%</p>
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2019-2021</span>
+						<h2>Higher Secondary School</h2>
+						<span class="position">Mother Teresa Higher secondary School,<br> Kanpur</span>
+						<p class="mt-4">Grade: 89.8%</p>
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021-2024</span>
+						<h2>Bachelor of Computer Application</h2>
+						<span class="position">JS University, Shikohabad</span>
+						<p class="mt-4">Grade: 8 CGPA (First Division with Distinction)</p>
+
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2024-present</span>
+						<h2>Master of Computer Application </h2>
+						<span class="position">PSIT, Kanpur</span>
+						<p class="mt-4">Grade: 8.2 CGPA (First Division with Distinction)</p>
+
+					</div>
+				</div>
+				
+			</div>
+
+
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Here are the projects based on my tech stack:</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/hariom551/MLC-Election.git" class="block-20 zoom-effect"
+							style="background-image: url('images/MLC.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/hariom551/MLC-Election.git">Voter Data
+									Collection and Management Platform Using React.js, Node.js, and MySQL</a></h3>
+							<p>Developed a secure system to manage up to 250,000 voter records. Includes multiple user
+								roles with specific access controls, ensuring efficient data handling and
+								accurate management.</p>
+						</div>
+					</div>
+				</div> -->
+				<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/hariom551/VideoTube_Backend-Youtube-like-Platform-.git"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/hariom551/VideoTube_Backend-Youtube-like-Platform-.git">Videotube:
+									A YouTube-like Platform</a></h3>
+							<p>Videotube is a backend project designed to replicate YouTube’s core features, including
+								user authentication, video uploading, and commenting. It ensures robust security with
+								JWT for login, bcrypt for password protection, and access/refresh tokens.</p>
+						</div>
+					</div>
+				</div> -->
+				<!-- <div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://github.com/hariom551/Bhopal_Metro_Route.git" class="block-20 zoom-effect"
+							style="background-image: url('images/Metro.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/hariom551/Bhopal_Metro_Route.git">Bhopal
+									metro Route Software</a></h3>
+							<p>Developed a C++ application utilizing Dijkstra's algorithm to compute the shortest path
+								across 53 Bhopal metro stations. Users can enter a starting station to view all possible
+								destinations with the minimum number of stops, ensuring efficient route planning.</p>
+						</div>
+					</div>
+				</div> -->
+			</div>
+			<br>
+
+
+			<!-- added justify-content-center to center align the last two projects -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/hariom551/BlogCraft.git" class="block-20 zoom-effect"
+							style="background-image: url('images/Blogcraft.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/hariom551/BlogCraft.git">BlogCraft Using
+									MongoDB, Express, and Node.js</a></h3>
+							<p>Developed a backend project enabling user authentication for login and sign-up. Users can
+								create, publish, and view their blogs, ensuring a smooth and efficient content
+								management experience.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/hariom551/Shopi_-React_E-_Commerce.git" class="block-20 zoom-effect"
+							style="background-image: url('images/proj_5.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/hariom551/Shopi_-React_E-_Commerce.git">Shopi E-Commerce
+									Using React.js</a></h3>
+							<p>Developed a React.js-based e-commerce platform with user authentication for login and
+								sign-up. Features include adding items to a cart, saving favorites, and managing the
+								shopping experience, simulating a full online shopping site.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+			<!-- <div class="container"> -->
+
+
+		</div>
+		<div class="ftco-section ftco-hireme img margin-top"
+			style="background-image: url(images/bg_1.jpg); position: relative;">
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on <span>Github</span></h2>
+					<div class="heading">
+						<h4>I love solving challenges and developing innovative solutions</h4>
+
+						<br>
+						<!-- Added inline styles to ensure the button is clickable -->
+						<!-- <p>
+							<a href="https://github.com/hariom551" class="btn btn-primary py-3 px-5"
+								style="position: relative; z-index: 2; display: inline-block;">GitHub</a>
+						</p> -->
+					</div>
+				</div>
+
+				<!-- </div> -->
+			</div>
+
+		</div>
+
+		<div class="row justify-content-center">
+			<div class="col-md-7 ftco-animate text-center">
+
+				<div class="heading">
+
+					<br>
+					<!-- Added inline styles to ensure the button is clickable -->
+					<p>
+						<a href="https://github.com/khushihere20" class="btn btn-primary py-3 px-5"
+							style="position: relative; z-index: 2; display: inline-block;">GitHub</a>
+					</p>
+				</div>
+			</div>
+
+			<!-- </div> -->
+		</div>
+
+	</section>
+
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+			<div class="row d-md-flex align-items-center">
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="12">0</strong>
+							<span>Achievements</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="7">0</strong>
+							<span>Projects</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="600">0</strong>
+							<span>LeetCode</span>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="500">0</strong>
+							<span>Cups of coffee</span>
+						</div>
+					</div>
+				</div> -->
+
+			</div>
+		</div>
+
+		<section class="ftco-section ftco-no-pb" id="achievements-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-5">
+					<div class="col-md-7 heading-section text-center ftco-animate">
+						<h1 class="big big-2">Achievements</h1>
+						<h2 class="mb-4">Achievements</h2>
+						<p>Here are my achievements based on my expertise in C, C++, Python, Data Structures &
+							Algorithms (DSA), competitive programming, and my extracurricular activities:</p>
+					</div>
+				</div>
+				<div class="row d-flex">
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://drive.google.com/file/d/11-hja6v2K-JPG_kdwsoBWRl7g1NIXydF/view?usp=drivesdk"
+								class="block-20 zoom-effect achievement-image"
+								style="background-image: url('images/achievement1.jpg');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a
+										href="https://drive.google.com/file/d/11-hja6v2K-JPG_kdwsoBWRl7g1NIXydF/view?usp=drivesdk">Achieved
+										a Global rank of 289 in TCS Codevita Round 2 and 5583 in Round 1</a></h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry">
+							<a href="https://drive.google.com/file/d/177QZ_6_xEohElbf5udc0x3wg7Ndtd6Z6/view?usp=drivesdk"
+								class="block-20 zoom-effect achievement-image"
+								style="background-image: url('images/achievement3.jpg');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a
+										href="https://drive.google.com/file/d/177QZ_6_xEohElbf5udc0x3wg7Ndtd6Z6/view?usp=drivesdk">Achieved
+										a national rank of 771 and the 2nd position within my college in the
+										Codekaze-Sept '23 - Round 2 competition</a></h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://drive.google.com/file/d/17C91y01Qx9Q8Hj56BsH8RiZawIBIcsoT/view?usp=drivesdk"
+								class="block-20 zoom-effect achievement-image"
+								style="background-image: url('images/achievement5.jpg');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a
+										href="https://drive.google.com/file/d/17C91y01Qx9Q8Hj56BsH8RiZawIBIcsoT/view?usp=drivesdk">Achieved
+										Silver Badge in NPTEL’s Database Management course from IIT Kharagpur</a></h3>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- added spacing between rows -->
+				<div class="row d-flex justify-content-center mt-5">
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://drive.google.com/file/d/1rMSxQNNm_OHdQcJnlNKexZcgfxBwoqfV/view?usp=drivesdk"
+								class="block-20 zoom-effect achievement-image"
+								style="background-image: url('images/achievement2.jpg');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a
+										href="https://drive.google.com/file/d/1rMSxQNNm_OHdQcJnlNKexZcgfxBwoqfV/view?usp=drivesdk">Achieved
+										Silver Badge in NPTEL’s Problem-Solving through Programming in C course from IIT
+										Kharagpur</a></h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://drive.google.com/file/d/1cd6nApX9oq_T7kc3uSpbsN-wIkuwiLQJ/view?usp=drivesdk"
+								class="block-20 zoom-effect achievement-image"
+								style="background-image: url('images/achievement7.jpg');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a
+										href="https://drive.google.com/file/d/1cd6nApX9oq_T7kc3uSpbsN-wIkuwiLQJ/view?usp=drivesdk">Successfully
+										completed 'C++ Language with Object-Oriented Programming and STL' course.</a>
+								</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://drive.google.com/file/d/1VNVgHcEhYTcOZ7_JdtOx64-z7hO0b1jy/view?usp=drivesdk"
+								class="block-20 zoom-effect achievement-image"
+								style="background-image: url('images/achievement6.jpg');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a
+										href="https://drive.google.com/file/d/1VNVgHcEhYTcOZ7_JdtOx64-z7hO0b1jy/view?usp=drivesdk">Successfully
+										completed Mysirg's 'Python Core' course, gaining essential Python skills.</a>
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- <div class="row d-flex justify-content-center mt-5">
+
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://drive.google.com/file/d/1vldtXnj4lRyM_JqQyykR8-yJEudP9FRn/view?usp=sharing"
+								class="block-20 zoom-effect achievement-image"
+								style="background-image: url('images/achievement4.jpg');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a
+										href="https://drive.google.com/file/d/1vldtXnj4lRyM_JqQyykR8-yJEudP9FRn/view?usp=sharing">Led
+										my team
+										to a finalist position and secured AIR 10 out of 970+ teams at E-Cell IIT
+										Bombay.</a></h3>
+							</div>
+						</div>
+					</div> -->
+					<!-- <div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="https://drive.google.com/file/d/1WneKaOMWZbIasMMMA0GWNw5rC2jAQ40X/view?usp=sharing"
+								class="block-20 zoom-effect achievement-image"
+								style="background-image: url('images/achievement8.jpg');">
+							</a>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading"><a
+										href="https://drive.google.com/file/d/1WneKaOMWZbIasMMMA0GWNw5rC2jAQ40X/view?usp=sharing">Earned
+										a Platinum Certificate and secured AIR-17 during an 8-month Campus Ambassador
+										role at IIT Bombay’s E-Cell.</a></h3>
+							</div>
+						</div>
+					</div> -->
+				<!-- </div> -->
+
+				<!-- <div class="row d-flex justify-content-center mt-5">
+					
+				</div> -->
+			</div>
+
+		</section>
+
+
+
+
+		<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+					<div class="col-md-7 heading-section text-center ftco-animate">
+						<h1 class="big big-2">Contact</h1>
+						<h2 class="mb-4">Contact Me</h2>
+						<p>Below are the details to reach out to me!</p>
+					</div>
+				</div>
+
+				<div class="row d-flex contact-info mb-5">
+					<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+						<div class="align-self-stretch box p-4 text-center">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="icon-map-signs"></span>
+							</div>
+							<h3 class="mb-4">Address</h3>
+							<p>Kanpur, India</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+						<div class="align-self-stretch box p-4 text-center">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="icon-phone2"></span>
+							</div>
+							<h3 class="mb-4">Contact Number</h3>
+							<p><a href="tel://0101010101">+91 9695620830</a></p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+						<div class="align-self-stretch box p-4 text-center">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="icon-paper-plane"></span>
+							</div>
+							<h3 class="mb-4">Email Address</h3>
+							<p><a href="mailto:hariomnathani551@gmail.com">awasthinoopur64@gmail.com</a></p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+						<div class="align-self-stretch box p-4 text-center">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="icon-globe"></span>
+							</div>
+							<!-- <h3 class="mb-4">Download Resume</h3>
+							<p><a
+									href="https://drive.google.com/file/d/1kutOYthsG60NqfgnTnz5ZzuuVe6tenWS/view?usp=drive_link">resumelink</a>
+							</p> -->
+						</div>
+					</div>
+
+					<div class="container">
+						<br>
+						<br>
+						<!-- <div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div> -->
+						<br>
+						<ul
+							class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+							<li class="ftco-animate normal-txt">Find me on </li>
+							<!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
+							<li class="ftco-animate"><a href="https://www.linkedin.com/in/noopurawasthi181/"><span
+										class="icon-linkedin"></span></a></li>
+							<!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li> -->
+							<!-- <li class="ftco-animate"><a
+									href="https://www.instagram.com/nathani_hariom?igsh=Zmw2aXJna3oxdGk0"><span
+										class="icon-instagram"></span></a></li> -->
+							<li class="ftco-animate"><a href="https://github.com/khushihere20"><span
+										class="icon-github"></span></a></li>
+
+							<li class="ftco-animate"><a href="mailto:awasthinoopur64@gmail.com"><span
+										class="icon-envelope"></span></a></li>
+
+						</ul>
+						<br>
+					</div>
+				</div>
+		</section>
+
+
+
+
+		<!-- <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center"> -->
+
+		<!-- <p> -->
+		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+		<!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+		<!-- </p> -->
+		<!-- </div>
+		  </div>
+		</div>
+	  </footer> -->
+
+
+		<!-- loader -->
+		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+				<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+				<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+					stroke="#F96D00" />
+			</svg></div>
+
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-migrate-3.0.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/jquery.stellar.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/aos.js"></script>
+		<script src="js/jquery.animateNumber.min.js"></script>
+		<script src="js/scrollax.min.js"></script>
+
+		<script src="js/main.js"></script>
+
+</body>
+
+</html>
